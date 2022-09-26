@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -111,7 +110,7 @@ public class IMCForm extends JFrame implements ActionListener {
 		Double altura = Double.parseDouble(txtInAltura.getText());
 		Double peso = Double.parseDouble(txtInPeso.getText());
 		Double resultado = peso / (altura * altura);
-		String res = String.valueOf(resultado);
+		String res = String.format("%.2f", resultado);
 		txtOutResultado.append(res);
 		if (resultado >= 30) {
 			lblDiagnostico.setText("Obesidad");
